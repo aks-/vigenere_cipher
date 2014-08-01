@@ -1,4 +1,4 @@
-require '/home/nikolaidante/Documents/vigenere_cipher/lib/vigenere_cipher.rb'
+require '../lib/vigenere_cipher.rb'
 
 describe 'vigenere cipher' do
   it 'should work for simple strings' do

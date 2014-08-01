@@ -25,8 +25,7 @@ def vigenere key, text, func
   iterator = iterator filter key
   plain_text = filter text
   plain_text.each_char.inject('') do |encrypted_text, encrypted_letter|
-    position = iterator.next
-    encrypted_text += ((encrypted_letter.ord - START).send(func, position) % SIZE + START).chr
+    encrypted_text += ((encrypted_letter.ord - START).send(func, iterator.next) % SIZE + START).chr
   end
 end
 
