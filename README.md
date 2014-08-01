@@ -2,7 +2,7 @@
 
 A ruby module, that can be used to encode plaintext to vigenere ciphertext, or the other way around(i.e. decoding).
 By default it works only on common ascii alphabets, i.e.`abcdefghijklmnopqrstuvwxyz`.
-You can change it's behaviour by changing the `regex` in `filter` method and change the `SIZE`'s value
+You can change it's behaviour by changing the `regex` in `filter` method and change the `SIZE`'s value and bit of change in vigenere method
 
 ##Usage
 
