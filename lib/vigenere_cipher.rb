@@ -3,17 +3,27 @@ DECRYPT_FUNC = :-
 SIZE = 26
 START = 'A'.unpack('C').first
 
-
-def vigenere_encrypt(text, key)
-  vigenere(key, text, ENCRYPT_FUNC)
+def filter data
+  data.upcase.gsub(/[^A-Z]/, '')
 end
 
-def vigenere_decrypt(key, text)
-  vigenere(key, text, DECRYPT_FUNC)
+def vigenere_encrypt key, text
+  vigenere key, text, ENCRYPT_FUNC
 end
 
-def vigenere(text, key, func)
-  p 'to be done'
+def vigenere_decrypt key, text
+  vigenere key, text, DECRYPT_FUNC
 end
 
-vigenere_encrypt('hello', 'hello')
+def vigenere key, text, func
+  raise NameError, 'Please provide valid key and text' if text.empty? or key.empty?
+  repeat_key = filter key
+  plain_text = filter text.upcase
+
+end
+
+vigenere_encrypt 'a| ', 'b lkj ; '
+
+
+
+
