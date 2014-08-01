@@ -15,4 +15,9 @@ describe 'vigenere cipher' do
     vigenere_encrypt('LEMON', 'ATtack! - aT   \ Da-|wN').should == 'LXFOPVEFRNHR'
     vigenere_decrypt('LEMON', 'LXFOPVEFR--N|HR').should == 'ATTACKATDAWN'
   end
+
+  it 'should raise an error when either key or text is empty' do
+    expect{ vigenere_encrypt('', 'A') }.to raise_error(NameError)
+    expect{ vigenere_decrypt('B', '') }.to raise_error(NameError)
+  end
 end
