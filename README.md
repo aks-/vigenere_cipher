@@ -10,6 +10,7 @@ You can change it's behaviour by changing the `regex` in `filter` method and cha
 `include Vigenere`
 
 ##API
+
 ###`vigenere_encrypt(key, text)`
 
 This method takes a short key and text as input and encrypts text using vigenere cipher.
