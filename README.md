@@ -21,6 +21,7 @@ vigenere_encrypt('LEMON', 'ATTACK AT DAWN')
 // --> 'LXFOPVEFRNHR'
 ```
 
+
 ###`vigenere_decrypt(key, text)`
 
 This method takes a short key and text as input and decrypts text using vigenere cipher.
