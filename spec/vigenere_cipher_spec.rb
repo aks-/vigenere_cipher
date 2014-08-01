@@ -1,6 +1,6 @@
-require '../lib/vigenere_cipher.rb'
+require '/home/nikolaidante/Documents/vigenere_cipher/lib/vigenere_cipher.rb'
 
-describe 'vigenere cipher', do
+describe 'vigenere cipher' do
   it 'should work for simple strings' do
     vigenere_encrypt('LEMON', 'ATTACK AT DAWN').should == 'LXFOPVEFRNHR'
     vigenere_decrypt('LEMON', 'LXFOPVEFRNHR').should == 'ATTACKATDAWN'

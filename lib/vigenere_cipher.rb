@@ -17,13 +17,13 @@ end
 
 def vigenere key, text, func
   raise NameError, 'Please provide valid key and text' if text.empty? or key.empty?
-  repeat_key = filter key
+  key_to_ascii = (filter key).to_a.collect{|character| character.unpack('C') - START}
   plain_text = filter text.upcase
-
+  plain_text.to_a.inject('') do |encrypted_text, encrypted_letter|
+    key_to_ascii = key_to_ascii.cycle
+    position = next.key_to_ascii
+    encrypted_text += ((encrypted_letter.unpack('C') - START).send(func, position) % SIZE).chr
+  end
 end
-
-vigenere_encrypt 'a| ', 'b lkj ; '
-
-
 
 

@@ -17,7 +17,7 @@ def crypt(text, key, func):
         raise IllegalError, 'Use + as second arument for encryption and - for decryption'
 
 
-operator = sys.argv[1]
+operator = sys.argv[1].upper().gsub('/[^A-Z/', '')
 key = sys.argv[2]
 text = sys.argv[3]
 
