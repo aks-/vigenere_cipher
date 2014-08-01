@@ -1,7 +1,7 @@
 ENCRYPT_FUNC = :+
 DECRYPT_FUNC = :-
 SIZE = 26
-START = 'A'.unpack('C').first
+START = 'A'.ord
 
 def filter data
   data.upcase.gsub /[^A-Z]/, ''
@@ -16,7 +16,7 @@ def vigenere_decrypt key, text
 end
 
 def iterator key
-  key.chars.map {|character| character.unpack('C').first - START }.cycle
+  key.chars.map {|character| character.ord - START }.cycle
 end
 
 
@@ -26,7 +26,7 @@ def vigenere key, text, func
   plain_text = filter text
   plain_text.each_char.inject('') do |encrypted_text, encrypted_letter|
     position = iterator.next
-    encrypted_text += ((encrypted_letter.unpack('C').first - START).send(func, position) % SIZE + START).chr
+    encrypted_text += ((encrypted_letter.ord - START).send(func, position) % SIZE + START).chr
   end
 end
 
