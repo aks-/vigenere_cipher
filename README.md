@@ -7,9 +7,11 @@ You can change it's behaviour by changing the `regex` in `filter` method and cha
 ##Usage
 
 *You can embed this module in a class. To embed a module in a class, you use the include statement in the class and make sure the file is in your path:
+
 `include Vigenere`
 
 ##API
+
 ###`vigenere_encrypt(key, text)`
 
 This method takes a short key and text as input and encrypts text using vigenere cipher.
@@ -19,7 +21,7 @@ vigenere_encrypt('LEMON', 'ATTACK AT DAWN')
 // --> 'LXFOPVEFRNHR'
 ```
 
-###`(vigenere_decrypt(key, text))`
+###`vigenere_decrypt(key, text)`
 
 This method takes a short key and text as input and decrypts text using vigenere cipher.
 
