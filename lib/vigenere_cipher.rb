@@ -16,7 +16,7 @@ def vigenere_decrypt key, text
 end
 
 def iterator key
-  key.chars.map {|character| character.ord - START }.cycle
+  key.chars.map do |character| character.ord - START end.cycle
 end
 
 
@@ -24,7 +24,7 @@ def vigenere key, text, func
   raise NameError, 'Please provide valid key and text' if text.empty? or key.empty?
   iterator = iterator filter key
   plain_text = filter text
-  plain_text.each_char.inject('') do |encrypted_text, encrypted_letter|
+  plain_text.each_char.inject '' do |encrypted_text, encrypted_letter|
     encrypted_text += ((encrypted_letter.ord - START).send(func, iterator.next) % SIZE + START).chr
   end
 end
